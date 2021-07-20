@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+* {
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    font-family: Roboto;
+    font-size: xx-large;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+}
+
+body.dark {
+    background-color: #263238;
+}
+
+body.dark p {
+    color: #ffffff;
+    transition: color 0.2s linear;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translatex(24px);
+}
+
+label {
+    display: flex;
+    position: relative;
+    background-color: #757474;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    padding: 5px;
+    align-items: center;
+    justify-content: space-between;
+    transform: scale(5);
+    cursor: pointer;
+    margin: 100px;
+}
+
+label .fa-moon {
+    color: #ffffff;
+}
+
+label .fa-sun {
+    color: #fc9c00;
+}
+
+label .ball {
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50px;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s linear;
+}
